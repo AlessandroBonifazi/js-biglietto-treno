@@ -8,19 +8,21 @@ const age = prompt('How old are you?');
 
 const price = (km * 0.21);
 
+
 // Discount
 if (age < 18) {
     // under 18
-    let total = (price - (20 * price / 100));
-    console.log('price:', total.toFixed(2))
-    // document.getElementById("total").value = total;
+    let total = (price - (20 * price / 100)).toFixed(2);
+    document.getElementById("total").innerHTML = 'Final price: ' + total + '€';
 
 } else if (age > 65) {
     // over 65
-    let total = (price - (40 * price / 100));
-    console.log('price:', total.toFixed(2))
+    let total = (price - (40 * price / 100)).toFixed(2);
+    document.getElementById("total").innerHTML = 'Final price: ' + total + '€';
+
 } else {
-    let total = price;
-    console.log('price:', total.toFixed(2))
+    // standard price
+    let total = price.toFixed(2);
+    document.getElementById("total").innerHTML = 'Final price: ' + total + '€';
 
 }
